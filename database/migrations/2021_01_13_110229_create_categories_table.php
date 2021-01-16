@@ -17,7 +17,7 @@ class CreateCategoriesTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug');
-            $table->foreignId('id_article')->constrained();
+            $table->foreignId('id_article');
         });
     }
 

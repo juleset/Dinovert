@@ -21,8 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="0de6fca3-773d-4a4a-a3ba-2a8f4ff9497b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_105737_create_properties_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_105737_create_properties_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_105841_create_types_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_105841_create_types_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_105943_create_appropriate_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_105943_create_appropriate_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_110229_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_110229_create_categories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_110255_create_logs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_110255_create_logs_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_16_133543_create_images_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_16_133543_create_images_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +192,7 @@
       <workItem from="1610534037819" duration="2262000" />
       <workItem from="1610609317634" duration="5714000" />
       <workItem from="1610695804756" duration="1066000" />
-      <workItem from="1610800901559" duration="2840000" />
+      <workItem from="1610800901559" duration="6752000" />
     </task>
     <servers />
   </component>
