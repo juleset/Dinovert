@@ -20,12 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0de6fca3-773d-4a4a-a3ba-2a8f4ff9497b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projet DINOVERT/MCD.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Projet DINOVERT/MCD.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projet DINOVERT/MLD.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Projet DINOVERT/MLD.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_105943_create_appropriate_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_105943_create_appropriate_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_110005_create_articles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_110005_create_articles_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +185,7 @@
       <workItem from="1610534037819" duration="2262000" />
       <workItem from="1610609317634" duration="5714000" />
       <workItem from="1610695804756" duration="1066000" />
-      <workItem from="1610800901559" duration="466000" />
+      <workItem from="1610800901559" duration="1718000" />
     </task>
     <servers />
   </component>
