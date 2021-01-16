@@ -15,7 +15,6 @@ class CreatePropertiesTable extends Migration
     {
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
-            $table->string('photo');
             $table->integer('price');
             $table->string('location');
             $table->integer('surface');
@@ -23,6 +22,7 @@ class CreatePropertiesTable extends Migration
             $table->string('condition');
             $table->integer('constructionYear');
             $table->text('description');
+            $table->foreignId('id_type')->constrained();
         });
     }
 
