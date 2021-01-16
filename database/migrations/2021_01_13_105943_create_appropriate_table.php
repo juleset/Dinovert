@@ -14,8 +14,8 @@ class CreateAppropriateTable extends Migration
     public function up()
     {
         Schema::create('appropriate', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->foreignId('id_tag');
+            $table->foreignId('id_article');
         });
     }
 
