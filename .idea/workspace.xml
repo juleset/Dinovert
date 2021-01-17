@@ -23,21 +23,18 @@
       <change beforePath="$PROJECT_DIR$/.idea/dinovert.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dinovert.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PropertyController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TagController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TypeController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Article.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Images.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Image.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Properties.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Property.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Tags.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tag.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Types.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Type.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PropertyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PropertyController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ArticleFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ArticleFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/CategoryFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/CategoryFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/ImageFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/ImageFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/PropertyFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/PropertyFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/TagFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/TagFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/TypeFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/TypeFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_105914_create_tags_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_105914_create_tags_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,6 +171,10 @@
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
       <path value="$PROJECT_DIR$/vendor/symfony/debug" />
       <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/vendor/spatie/menu" />
+      <path value="$PROJECT_DIR$/vendor/spatie/url" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-menu" />
+      <path value="$PROJECT_DIR$/vendor/spatie/macroable" />
     </include_path>
   </component>
   <component name="ProjectId" id="1n0jjQsZoWg2Q0fzG8NuAxLJ6Pc" />
@@ -207,7 +208,7 @@
       <workItem from="1610609317634" duration="5714000" />
       <workItem from="1610695804756" duration="1066000" />
       <workItem from="1610800901559" duration="7141000" />
-      <workItem from="1610885638594" duration="4983000" />
+      <workItem from="1610885638594" duration="12148000" />
     </task>
     <servers />
   </component>
@@ -231,6 +232,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="705" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-13.1080.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1610889811545" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610898064966">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-13.1080.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1610898064966" />
     <state x="685" y="193" key="FileChooserDialogImpl" timestamp="1610804321167">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -240,5 +245,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1610534262482" />
+    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1610892686260">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="253" width="585" height="534" key="find.popup/-13.1080.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1610892686260" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1610894029842">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-13.1080.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1610894029842" />
   </component>
 </project>

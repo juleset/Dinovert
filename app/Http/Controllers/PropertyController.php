@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Property;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,8 @@ class PropertyController extends Controller
      */
     public function index()
     {
-        //
+        $properties = Property::with('types','images');
+        return view('welcome',compact('properties'));
     }
 
     /**

@@ -122,6 +122,10 @@
       <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
       <path value="$PROJECT_DIR$/vendor/symfony/debug" />
       <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/vendor/spatie/menu" />
+      <path value="$PROJECT_DIR$/vendor/spatie/url" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-menu" />
+      <path value="$PROJECT_DIR$/vendor/spatie/macroable" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />

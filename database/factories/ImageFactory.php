@@ -22,7 +22,7 @@ class ImageFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'img' => $this->faker->image(),
         ];
     }
 }

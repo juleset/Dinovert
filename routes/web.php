@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PropertyController;
+use Spatie\Menu\Menu;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,4 @@ Route::resource('articles', ArticleController::class);
 
 //PROPERTIES ROUTES
 Route::resource('properties', PropertyController::class);
+
