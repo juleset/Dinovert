@@ -51,12 +51,10 @@
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Titre</th>
-                                <th>Contenu</th>
-                                <th>Asset</th>
-                                <th>Tag</th>
-                                <th>Créé le</th>
-                                <th>Modifié le</th>
+                                <th>Prix</th>
+                                <th>Localisation</th>
+
+
 
 
                             </tr>
@@ -68,8 +66,7 @@
                                         <td>{{$property -> id}}</td>
                                         <td>{{$property -> price}}</td>
                                         <td>{{$property -> location}}</td>
-                                        <td>{{$property -> created_at}}</td>
-                                        <td>{{$property -> updated_at}}</td>
+
 
                                     </tr>
                                 @endforeach

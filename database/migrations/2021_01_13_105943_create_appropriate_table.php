@@ -14,9 +14,10 @@ class CreateAppropriateTable extends Migration
     public function up()
     {
         Schema::create('appropriate', function (Blueprint $table) {
-            $table->foreignId('id_tag');
-            $table->foreignId('id_article');
-            $table->primary(['id_tag', 'id_article']);
+            $table->foreignId('tag_id')->constrained();
+            $table->foreignId('article_id')->constrained();
+            $table->primary(['tag_id', 'article_id']);
+            $table->timestamp();
         });
     }
 

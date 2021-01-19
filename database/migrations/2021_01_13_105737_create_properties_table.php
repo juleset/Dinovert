@@ -22,7 +22,8 @@ class CreatePropertiesTable extends Migration
             $table->string('condition');
             $table->integer('constructionYear');
             $table->text('description');
-            $table->foreignId('id_type');
+            $table->foreignId('type_id')->constrained();
+            $table->timestamp();
         });
     }
 
