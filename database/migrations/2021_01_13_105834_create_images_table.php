@@ -17,7 +17,7 @@ class CreateImagesTable extends Migration
             $table->id();
             $table->string('img');
             $table->foreignId('property_id')->constrained();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

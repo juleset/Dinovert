@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -21,20 +24,18 @@
   <component name="ChangeListManager">
     <list default="true" id="0de6fca3-773d-4a4a-a3ba-2a8f4ff9497b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projet DINOVERT/MCD.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Projet DINOVERT/MCD.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projet DINOVERT/MLD.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Projet DINOVERT/MLD.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_12_105841_create_types_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_12_105841_create_types_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_104133_create_sessions_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_12_104133_create_sessions_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_105737_create_properties_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_105737_create_properties_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_105841_create_types_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_12_105841_create_types_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_105834_create_images_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_105834_create_images_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_105914_create_tags_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_105914_create_tags_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_105943_create_appropriate_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_105943_create_appropriate_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_110005_create_articles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_110005_create_articles_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_110229_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_110229_create_categories_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_105943_create_appropriate_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_105943_create_article_tag_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_110005_create_articles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_105942_create_articles_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_110229_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_105935_create_categories_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_110255_create_logs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_110255_create_logs_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_13_110317_create_newletters_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_110317_create_newletters_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_16_133543_create_images_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_13_105834_create_images_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +186,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cfp_rdv" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -210,7 +211,8 @@
       <workItem from="1610800901559" duration="7141000" />
       <workItem from="1610885638594" duration="12293000" />
       <workItem from="1611075963790" duration="1203000" />
-      <workItem from="1611077287501" duration="2763000" />
+      <workItem from="1611077287501" duration="3602000" />
+      <workItem from="1611395059221" duration="5390000" />
     </task>
     <servers />
   </component>
@@ -242,10 +244,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-13.1080.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1611077682416" />
-    <state x="685" y="193" key="FileChooserDialogImpl" timestamp="1610804321167">
+    <state x="685" y="193" key="FileChooserDialogImpl" timestamp="1611395500303">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="685" y="193" key="FileChooserDialogImpl/-13.1080.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1610804321167" />
+    <state x="685" y="193" key="FileChooserDialogImpl/-13.1080.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1611395500303" />
     <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1610534288953" />
     <state width="201" height="457" key="HiddenNamespacesPopup" timestamp="1611077881093">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -256,17 +258,17 @@
     </state>
     <state x="346" y="72" key="SettingsEditor/-13.1080.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1611077176547" />
     <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1610534262482" />
-    <state x="786" y="113" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1611079453477">
+    <state x="786" y="113" width="316" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1611409748729">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="786" y="113" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/-13.1080.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1611079453477" />
-    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1610892686260">
+    <state x="786" y="113" width="316" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/-13.1080.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1611409748729" />
+    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1611396416639">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="253" width="585" height="534" key="find.popup/-13.1080.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1610892686260" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1610894029842">
+    <state x="667" y="253" width="585" height="534" key="find.popup/-13.1080.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1611396416639" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1611409333102">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-13.1080.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1610894029842" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-13.1080.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1611409333102" />
   </component>
 </project>

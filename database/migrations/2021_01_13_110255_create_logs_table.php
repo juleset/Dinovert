@@ -17,7 +17,7 @@ class CreateLogsTable extends Migration
             $table->id();
             $table->dateTime('date_log');
             $table->string('content');
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

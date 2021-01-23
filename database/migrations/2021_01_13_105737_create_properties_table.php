@@ -23,7 +23,7 @@ class CreatePropertiesTable extends Migration
             $table->integer('constructionYear');
             $table->text('description');
             $table->foreignId('type_id')->constrained();
-            $table->timestamp();
+            $table->timestamps();
         });
     }
 

@@ -3,7 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PropertyController;
-use Spatie\Menu\Menu;
+use App\Http\Controllers\TagController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ImageController;
+//use Spatie\Menu\Menu;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,4 +32,13 @@ Route::resource('articles', ArticleController::class);
 
 //PROPERTIES ROUTES
 Route::resource('properties', PropertyController::class);
+
+//TAGS ROUTES
+Route::resource('tags', TagController::class);
+
+//CATEGORIES ROUTES
+Route::resource('categories', CategoryController::class);
+
+//IMAGES ROUTES
+Route::resource('images', ImageController::class);
 
