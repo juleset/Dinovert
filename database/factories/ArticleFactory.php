@@ -2,6 +2,8 @@
 
 namespace Database\Factories;
 
+use App\Models\Article;
+use App\Models\Category;
 use App\Models\Model;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -12,7 +14,7 @@ class ArticleFactory extends Factory
      *
      * @var string
      */
-    protected $model = Model::class;
+    protected $model = Article::class;
 
     /**
      * Define the model's default state.
@@ -25,6 +27,7 @@ class ArticleFactory extends Factory
             'img' => $this->faker->image(),
             'title' => $this->faker->word,
             'description' => $this->faker->paragraph(rand(5, 10)),
+            'category_id' => Category::all()->random()->id,
         ];
     }
 }

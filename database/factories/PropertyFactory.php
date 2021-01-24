@@ -3,6 +3,8 @@
 namespace Database\Factories;
 
 use App\Models\Model;
+use App\Models\Property;
+use App\Models\Type;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class PropertyFactory extends Factory
@@ -12,7 +14,7 @@ class PropertyFactory extends Factory
      *
      * @var string
      */
-    protected $model = Model::class;
+    protected $model = Property::class;
 
     /**
      * Define the model's default state.
@@ -29,6 +31,7 @@ class PropertyFactory extends Factory
             'condition' => $this->faker->randomElement(['Neuf', 'Abandonné', 'Récemment rénové']),
             'constructionYear' => $this->faker->numberBetween(2000, 2021),
             'description' => $this->faker->paragraph(rand(5, 10)),
+            'type_id' => Type::all()->random()->id,
         ];
     }
 }

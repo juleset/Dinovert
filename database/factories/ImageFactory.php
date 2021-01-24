@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Image;
 use App\Models\Model;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -12,7 +13,7 @@ class ImageFactory extends Factory
      *
      * @var string
      */
-    protected $model = Model::class;
+    protected $model = Image::class;
 
     /**
      * Define the model's default state.
@@ -22,7 +23,7 @@ class ImageFactory extends Factory
     public function definition()
     {
         return [
-            'img' => $this->faker->image(),
+            'img' => $this->faker->imageUrl(),
         ];
     }
 }

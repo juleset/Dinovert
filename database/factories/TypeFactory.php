@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Model;
+use App\Models\Type;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class TypeFactory extends Factory
@@ -12,7 +13,7 @@ class TypeFactory extends Factory
      *
      * @var string
      */
-    protected $model = Model::class;
+    protected $model = Type::class;
 
     /**
      * Define the model's default state.
