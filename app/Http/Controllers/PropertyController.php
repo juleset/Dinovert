@@ -15,8 +15,10 @@ class PropertyController extends Controller
      */
     public function index()
     {
-        $properties = Property::with('types','images');
+        $properties = Property::with('types','images')->latest()->limit(3)->get()->reverse();
+//        dd($properties);
         return view('welcome',compact('properties'));
+
     }
 
     /**

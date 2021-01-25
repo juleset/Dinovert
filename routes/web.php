@@ -19,26 +19,28 @@ use App\Http\Controllers\ImageController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+Route::get('/', [PropertyController::class, 'index']);
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
 //ARTICLES ROUTES
-Route::resource('articles', ArticleController::class);
+//Route::resource('articles', ArticleController::class);
 
 //PROPERTIES ROUTES
-Route::resource('properties', PropertyController::class);
+//Route::resource('properties', PropertyController::class);
 
 //TAGS ROUTES
-Route::resource('tags', TagController::class);
+//Route::resource('tags', TagController::class);
 
 //CATEGORIES ROUTES
-Route::resource('categories', CategoryController::class);
+//Route::resource('categories', CategoryController::class);
 
 //IMAGES ROUTES
-Route::resource('images', ImageController::class);
+//Route::resource('images', ImageController::class);
+
 
