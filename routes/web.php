@@ -32,7 +32,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //Route::resource('articles', ArticleController::class);
 
 //PROPERTIES ROUTES
-//Route::resource('properties', PropertyController::class);
+Route::resource('properties', PropertyController::class);
 
 //TAGS ROUTES
 //Route::resource('tags', TagController::class);

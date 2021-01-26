@@ -4,11 +4,12 @@
 
 
 
-body > main > div:first-child{
-    background-image: url("https://images4.alphacoders.com/150/150198.jpg");
-
-
-}body > div.min-h-screen.bg-color3 > main > div.relative.flex.items-top.justify-center.min-h-screen.dark\:bg-gray-900.sm\:items-center.sm\:pt-0{
+/*body > main > div:first-child{*/
+/*    background-image: url("https://images4.alphacoders.com/150/150198.jpg");*/
+/*}*/
+body > div.min-h-screen.bg-color3 > main > div:nth-child(1){
     background-image: url("https://images4.alphacoders.com/150/150198.jpg");
 }
+
+
 

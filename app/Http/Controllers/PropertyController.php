@@ -15,7 +15,13 @@ class PropertyController extends Controller
      */
     public function index()
     {
-        $properties = Property::with('types','images')->latest()->limit(3)->get()->reverse();
+        $properties = Property::with('types','images')
+            ->join('images','property_id', '=', 'properties.id')
+            ->latest('properties.created_at')
+            ->limit(3)
+            ->get()
+            ->reverse();
+//        dd($properties);
         return view('welcome',compact('properties'));
 
     }
@@ -47,9 +53,11 @@ class PropertyController extends Controller
      * @param  \App\Models\Property  $properties
      * @return \Illuminate\Http\Response
      */
-    public function show(Property $properties)
+    public function show($id)
     {
-        //
+        $properties = Property::findOrFail($id);
+        dd($properties);
+        return view('properties.show', compact('properties'));
     }
 
     /**
