@@ -7,9 +7,10 @@
 /*body > main > div:first-child{*/
 /*    background-image: url("https://images4.alphacoders.com/150/150198.jpg");*/
 /*}*/
-body > div.min-h-screen.bg-color3 > main > div:nth-child(1){
+body > div.min-h-screen.bg-color3{
     background-image: url("https://images4.alphacoders.com/150/150198.jpg");
 }
+
 
 
 

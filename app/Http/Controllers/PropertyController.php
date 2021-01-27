@@ -33,7 +33,9 @@ class PropertyController extends Controller
      */
     public function create()
     {
-        //
+        $properties = Property::with('types','images');
+        return view('properties.create', compact('properties'));
+
     }
 
     /**
