@@ -36,7 +36,7 @@
                 {{ $slot }}
             </main>
         </div>
-
+        <!-- FOOTER -->
         <div class=" bg-grey-lighter p-8 bg-blue-bayoux-600">
             <div class="sm:flex mb-4">
                 <div class="sm:w-1/2 h-auto">
@@ -93,6 +93,8 @@
                         <button class="bg-orange text-white rounded-sm h-auto text-xs p-3">Subscribe</button>
                     </div>
                 </div>
+
+{{--                <img src="Projet%20DINOVERT/img/dino.png">--}}
 
             </div>
         </div>

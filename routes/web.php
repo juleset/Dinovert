@@ -19,10 +19,16 @@ use App\Http\Controllers\ImageController;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+Route::get('/admin', function () {
+    return view('admin.admin');
+});
 Route::get('/', [PropertyController::class, 'index']);
+
+Route::get('/admin/tabproperties', [PropertyController::class, 'index2']);
+
+
+
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

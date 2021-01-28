@@ -8,7 +8,7 @@
         <div class="grid justify-items-center ">
             <div class="">
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <!--LOGO-->
+
                 </div>
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth

@@ -15,7 +15,7 @@ class PropertyController extends Controller
      */
     public function index()
     {
-        $properties = Property::with('types','images')
+        $properties = Property::with('type','images')
             ->join('images','property_id', '=', 'properties.id')
             ->latest('properties.created_at')
             ->limit(3)
@@ -23,6 +23,15 @@ class PropertyController extends Controller
             ->reverse();
 //        dd($properties);
         return view('welcome',compact('properties'));
+
+    }
+
+    public function index2()
+    {
+        $properties = Property::with('type','images')
+            ->get();
+//        dd($properties);
+        return view('admin.tabproperties',compact('properties'));
 
     }
 
@@ -91,8 +100,12 @@ class PropertyController extends Controller
      * @param  \App\Models\Property  $properties
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Property $properties)
+    public function destroy($id, Request $request)
     {
-        //
+        if(Property::findOrFail($id)->destroy($request)){
+            return redirect()->route('admin');
+        }else{
+            return abort(404);
+        }
     }
 }

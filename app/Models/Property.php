@@ -13,7 +13,7 @@ class Property extends Model
         return $this->hasMany(Image::class);
     }
 
-    public function types(){
+    public function type(){
         return $this->belongsTo(Type::class);
     }
 }
