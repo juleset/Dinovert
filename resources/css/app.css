@@ -11,6 +11,10 @@ body > div.min-h-screen.bg-color3{
     background-image: url("https://images4.alphacoders.com/150/150198.jpg");
 }
 
+table, th, td {
+    border: 1px solid black;
+}
+
 
 
 

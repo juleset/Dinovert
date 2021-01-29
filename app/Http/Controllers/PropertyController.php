@@ -55,7 +55,8 @@ class PropertyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Property::create($request->all());
+        return redirect()->route('admin.tabproperties');
     }
 
     /**
@@ -77,9 +78,10 @@ class PropertyController extends Controller
      * @param  \App\Models\Property  $properties
      * @return \Illuminate\Http\Response
      */
-    public function edit(Property $properties)
+    public function edit($id)
     {
-        //
+        $properties = Property::findOrFail($id);
+        return view('properties.edit', ['property' => $properties]);
     }
 
     /**
@@ -89,9 +91,14 @@ class PropertyController extends Controller
      * @param  \App\Models\Property  $properties
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Property $properties)
+    public function update($id, Request $request)
     {
-        //
+        if(Property::findOrFail($id)->update($request->all())){
+            return redirect()->route('admin.tabproperties');
+        }else{
+            return abort(404);
+        }
+
     }
 
     /**
@@ -103,7 +110,7 @@ class PropertyController extends Controller
     public function destroy($id, Request $request)
     {
         if(Property::findOrFail($id)->destroy($request)){
-            return redirect()->route('admin');
+            return redirect()->route('admin.tabproperties');
         }else{
             return abort(404);
         }

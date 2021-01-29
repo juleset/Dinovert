@@ -25,6 +25,7 @@ Route::get('/admin', function () {
 Route::get('/', [PropertyController::class, 'index']);
 
 Route::get('/admin/tabproperties', [PropertyController::class, 'index2']);
+Route::get('/admin/tabarticles', [ArticleController::class, 'index']);
 
 
 

@@ -224,7 +224,7 @@
 {{--                logo--}}
 {{--            </a>--}}
 
-            <img src="{{url('/img/triceratops_02.svg')}}" class="w-20">
+            <a href="{{url('/')}}"> <img src="{{url('/img/triceratops_02.svg')}}" class="w-20"></a>
             <button class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none" type="button">
                 <span class="block relative w-6 h-px rounded-sm bg-white"></span>
                 <span class="block relative w-6 h-px rounded-sm bg-white mt-1"></span>

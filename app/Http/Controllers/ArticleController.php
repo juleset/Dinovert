@@ -14,7 +14,9 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        $articles = Article::with(['category','tags'])->get();
+        //dd($articles);
+        return view('admin.tabarticles',compact('articles'));
     }
 
     /**
