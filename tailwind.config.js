@@ -24,6 +24,7 @@ module.exports = {
             yellow: colors.amber,
             blue: colors.blue,
             pink: colors.pink,
+            orange: colors.orange,
             green: colors.green,
             'pale-leaf': {
                 '50': '#fcfdfc',

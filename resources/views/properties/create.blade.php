@@ -25,18 +25,27 @@
         <div class="container">
 
             <div class="grid grid-rows-1 justify-items-center ">
-                {!! Form::open()!!}
+                {!! Form::open(['route' => ['properties.store']])!!}
+
                 <div>
                     {{Form::label('Type de bien: ')}}
-                    {{Form::select('title', \App\Models\Type::pluck('title'), null, ['placeholder' => '--Choisir un type--'])}}
+                    {{Form::select('type_id', \App\Models\Type::pluck('title', 'id'), null, ['placeholder' => '--Choisir un type--'])}}
                 </div>
                 <div>
                     {{Form::label('Prix: ')}}
                     {{Form::number('price',null)}}
                 </div>
                 <div>
+                    {{Form::label('Localisation: ')}}
+                    {{Form::text('location',null)}}
+                </div>
+                <div>
                     {{Form::label('Surface (m²): ')}}
                     {{Form::number('surface',null)}}
+                </div>
+                <div>
+                    {{Form::label('Nombre de pièces: ')}}
+                    {{Form::number('roomNumber',null)}}
                 </div>
                 <div>
                     {{Form::label('Etat: ')}}

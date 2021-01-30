@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Property;
+use App\Models\Type;
 use Illuminate\Http\Request;
 
 class PropertyController extends Controller
@@ -42,8 +43,8 @@ class PropertyController extends Controller
      */
     public function create()
     {
-        $properties = Property::with('types','images');
-        return view('properties.create', compact('properties'));
+
+        return view('properties.create');
 
     }
 
@@ -55,7 +56,7 @@ class PropertyController extends Controller
      */
     public function store(Request $request)
     {
-        Property::create($request->all());
+        Property::create($request->except('_token'));
         return redirect()->route('admin.tabproperties');
     }
 
@@ -109,7 +110,7 @@ class PropertyController extends Controller
      */
     public function destroy($id, Request $request)
     {
-        if(Property::findOrFail($id)->destroy($request)){
+        if(Property::findOrFail($id)->destroy($request->all())){
             return redirect()->route('admin.tabproperties');
         }else{
             return abort(404);

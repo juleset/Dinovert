@@ -8,6 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Property extends Model
 {
     use HasFactory;
+    protected $fillable = ['_token','price','location','surface','roomNumber','condition','constructionYear','description','type_id'];
+
+    public function setTypeAttribute($value)
+    {
+        $this->attributes['type_id'] = $value;
+    }
 
     public function images(){
         return $this->hasMany(Image::class);
