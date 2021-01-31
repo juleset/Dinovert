@@ -69,7 +69,7 @@ class PropertyController extends Controller
     public function show($id)
     {
         $properties = Property::findOrFail($id);
-        dd($properties);
+        //dd($properties);
         return view('properties.show', compact('properties'));
     }
 
@@ -110,7 +110,7 @@ class PropertyController extends Controller
      */
     public function destroy($id, Request $request)
     {
-        if(Property::findOrFail($id)->destroy($request->all())){
+        if(Property::findOrFail($id)->delete()){
             return redirect()->route('admin.tabproperties');
         }else{
             return abort(404);

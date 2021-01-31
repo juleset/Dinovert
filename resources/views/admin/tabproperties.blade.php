@@ -48,7 +48,7 @@
                                 {{Form::submit('Supprimer', ['onclick' => 'return confirm ("Êtes-vous sur de vouloir supprimer ce bien ?");'])}}
                                 {!!Form::close()!!}</td>
                             <td>
-                                <a href="{{url('/properties/{id}/edit')}}"><button type="submit">Modifier</button></a>
+                                <a href="{{url('/properties/edit/'  . $property->id )}}"><button type="submit">Modifier</button></a>
                             </td>
                         </tr>
                     @endforeach

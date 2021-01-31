@@ -29,20 +29,23 @@
                             <td>{{$article -> description}}</td>
                             <td>{{$article -> category -> title}}</td>
                             <td>{{$article -> tags[0] -> title}}</td>
-{{--                            <td>{!!Form::open(['method'=>'DELETE','route'=>['articles.destroy',$article->id]])!!}--}}
-{{--                                {{Form::submit('Supprimer')}}--}}
-{{--                                {!!Form::close()!!}</td>--}}
-                            <td>{!!Form::open()!!}
-                                {{Form::submit('Modifier')}}
+                            <td>{!!Form::open(['method'=>'DELETE','route'=>['articles.destroy',$article->id]])!!}
+                                {{Form::submit('Supprimer', ['onclick' => 'return confirm ("Êtes-vous sur de vouloir supprimer cette article ?");'])}}
                                 {!!Form::close()!!}</td>
+                            <td>
+                                <a href="{{url('/articles/edit/'  . $article->id )}}"><button type="submit">Modifier</button></a>
+                            </td>
                         </tr>
                     @endforeach
                     </tbody>
                 </table>
 
                 <div class="text-6xl">
-                    <a href="{{url('article/create')}}">
-                        <button>Ajouter un bien</button>
+                    <a href="{{url('articles/create')}}">
+                        <button>Ajouter un article</button>
+                    </a>
+                    <a href="{{url('tags/create')}}">
+                        <button>Ajouter un tag</button>
                     </a>
                 </div>
             </div>

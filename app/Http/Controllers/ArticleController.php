@@ -26,7 +26,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        return view('articles.create');
     }
 
     /**
@@ -37,7 +37,8 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Article::create($request->except('_token'));
+        return redirect()->route('admin.tabarticles');
     }
 
     /**
@@ -46,9 +47,11 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $articles
      * @return \Illuminate\Http\Response
      */
-    public function show(Article $articles)
+    public function show($id)
     {
-        //
+        $articles = Article::findOrFail($id);
+        //dd($properties);
+        return view('articles.show', compact('articles'));
     }
 
     /**
@@ -57,9 +60,10 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $articles
      * @return \Illuminate\Http\Response
      */
-    public function edit(Article $articles)
+    public function edit($id)
     {
-        //
+        $articles = Article::findOrFail($id);
+        return view('articles.edit', ['articles' => $articles]);
     }
 
     /**
@@ -69,9 +73,13 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $articles
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Article $articles)
+    public function update($id, Request $request)
     {
-        //
+        if(Article::findOrFail($id)->update($request->all())){
+            return redirect()->route('admin.tabarticles');
+        }else{
+            return abort(404);
+        }
     }
 
     /**
@@ -80,8 +88,15 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $articles
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Article $articles)
+    public function destroy($id)
     {
-        //
+        $article = Article::findOrFail($id);
+        // detach clean le contenu des tables en plus
+        $article->tags()->detach();
+        if($article->delete()){
+            return redirect()->route('admin.tabarticles');
+        }else{
+            return abort(404);
+        }
     }
 }

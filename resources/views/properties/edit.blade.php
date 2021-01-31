@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Ajout d\'un bien') }}
+            {{ __('Modification d\'un bien') }}
         </h2>
     </x-slot>
 
@@ -25,46 +25,50 @@
         <div class="container">
 
             <div class="grid grid-rows-1 justify-items-center ">
-                {!! Form::model($properties,['method' => 'put'])!!}
-                <div>
-                    {{Form::label('Type de bien: ')}}
-                    {{Form::select('title', \App\Models\Type::pluck('title'), null, ['placeholder' => '--Choisir un type--'])}}
-                </div>
-                <div>
-                    {{Form::label('Prix: ')}}
-                    {{Form::number('price',null)}}
-                </div>
-                <div>
-                    {{Form::label('Localisation: ')}}
-                    {{Form::text('location',null)}}
-                </div>
-                <div>
-                    {{Form::label('Surface (m²): ')}}
-                    {{Form::number('surface',null)}}
-                </div>
-                <div>
-                    {{Form::label('Nombre de pièces: ')}}
-                    {{Form::number('roomNumber',null)}}
-                </div>
-                <div>
-                    {{Form::label('Etat: ')}}
-                    {{Form::select('condition', \App\Models\Property::groupBy('condition')->pluck('condition'), null, ['placeholder' => '--Choisir un état--'])}}
-                </div>
-                <div>
-                    {{Form::label('Année de construction: ')}}
-                    {{Form::number('constructionYear',null)}}
-                </div>
-                <div>
-                    {{Form::label('image: ')}}
-                    {{Form::file('image',null)}}
-                </div>
-                <div>
-                    {{Form::label('description: ')}}
-                    {{Form::textarea('description',null)}}
-                </div>
-                {{Form::submit('Envoyer')}}
+                {!! Form::model($property, ['route' => ['properties.update', $property->id],'method' => 'PUT'])!!}
+                <table class="bg-oxley-500 bg-opacity-90">
+                    <tr>
+                        <td>{{Form::label('Type de bien: ')}}</td>
+                        <td>{{Form::select('type_id', \App\Models\Type::pluck('title', 'id'), null)}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{Form::label('Prix: ')}}</td>
+                        <td>{{Form::number('price',null)}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{Form::label('Localisation: ')}}</td>
+                        <td>{{Form::text('location',null)}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{Form::label('Surface (m²): ')}}</td>
+                        <td>{{Form::number('surface',null)}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{Form::label('Nombre de pièces: ')}}</td>
+                        <td>{{Form::number('roomNumber',null)}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{Form::label('Etat: ')}}</td>
+                        <td>{{Form::text('condition',null)}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{Form::label('Année de construction: ')}}</td>
+                        <td>{{Form::number('constructionYear',null)}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{Form::label('image: ')}}</td>
+                        <td>{{Form::textarea('image',null)}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{Form::label('description: ')}}</td>
+                        <td>{{Form::textarea('description',null)}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{Form::submit('Modifier')}}</td>
+                    </tr>
                 {!! Form::close() !!}
             </div>
+            </table>
 
         </div>
     </div>

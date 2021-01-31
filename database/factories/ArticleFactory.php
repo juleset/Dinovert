@@ -24,7 +24,7 @@ class ArticleFactory extends Factory
     public function definition()
     {
         return [
-            'img' => $this->faker->image(),
+            'img' => 'https://picsum.photos/' . 640 . '/' . 480 . '?random=' . rand(1, 10),
             'title' => $this->faker->word,
             'description' => $this->faker->paragraph(rand(5, 10)),
             'category_id' => Category::all()->random()->id,
