@@ -40,17 +40,19 @@
                     </tbody>
                 </table>
 
-                <div class="text-6xl">
-                    <a href="{{url('articles/create')}}">
-                        <button>Ajouter un article</button>
-                    </a>
-                    <a href="{{url('tags/create')}}">
-                        <button>Ajouter un tag</button>
-                    </a>
-                </div>
             </div>
         </div>
     </div>
 
+    <div class="grid gap-2">
+
+        <a href="{{route('articles.create')}}" class="grid justify-items-center">
+            <button class="uppercase px-8 py-2 rounded-full bg-oxley-500 text-blue-50 max-w-max shadow-sm hover:shadow-lg">Ajouter un article</button>
+        </a>
+        <a href="{{route('tags.create')}}" class="grid justify-items-center">
+            <button class="uppercase px-8 py-2 rounded-full bg-oxley-500 text-blue-50 max-w-max shadow-sm hover:shadow-lg">Ajouter un tag</button>
+        </a>
+
+    </div>
 
 </x-app-layout>

@@ -19,26 +19,30 @@ use App\Http\Controllers\ImageController;
 |
 */
 
-Route::resource('properties', PropertyController::class)->only([
-    'index', 'show'
-]);
 
-Route::resource('articles', ArticleController::class)->only([
-    'index', 'show'
-]);
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
-    Route::resource('properties', PropertyController::class)->only([
-        'create', 'store', 'update', 'destroy'
+    Route::resource('properties', PropertyController::class)->except([
+        'index', 'show'
     ]);
+    Route::resource('articles', ArticleController::class)->except([
+        'index','show'
+    ]);
+    Route::resource('tags', TagController::class)->only([
+        'create', 'store'
+    ]);
+
+    Route::get('/contact', function (){return view('contact.contact');})->name('contact');
+    Route::get('/mentions', function (){return view('mentions.mentions');})->name('mentions');
+    //Route::get('/properties/create', [PropertyController::class, 'create'])->name('properties.create');
     Route::get('/admin/tabproperties', [PropertyController::class, 'index2'])->name('admin.tabproperties');
     Route::get('/properties/edit/{id}', [PropertyController::class, 'edit'])->name('properties.edit');
     Route::delete('/properties/{id}', [PropertyController::class, 'destroy'])->name('properties.destroy');
+    Route::get('/properties/index', [PropertyController::class, 'index3'])->name('properties.index');
+
 
     Route::get('/admin/tabarticles', [ArticleController::class, 'index'])->name('admin.tabarticles');
-    Route::resource('articles', ArticleController::class)->only([
-        'create', 'store', 'update', 'destroy'
-    ]);
+
     Route::delete('/articles/{id}', [ArticleController::class, 'destroy'])->name('articles.destroy');
     Route::get('/articles/edit/{id}', [ArticleController::class, 'edit'])->name('articles.edit');
 
@@ -60,6 +64,9 @@ Route::get('/', [PropertyController::class, 'index']);
 
 //TAGS ROUTES
 //Route::resource('tags', TagController::class);
+
+//PROPERTIES ROUTES
+//Route::resource('properties', PropertyController::class);
 
 //CATEGORIES ROUTES
 //Route::resource('categories', CategoryController::class);

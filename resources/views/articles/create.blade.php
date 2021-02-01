@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Modification d\'un bien') }}
+            {{ __('Ajout d\'un article') }}
         </h2>
     </x-slot>
 
@@ -25,7 +25,7 @@
         <div class="container">
 
             <div class="grid grid-rows-1 justify-items-center ">
-                {!! Form::open(['route' => ['properties.store']])!!}
+                {!! Form::open(['route' => ['articles.store']])!!}
                 <table class="bg-oxley-500 bg-opacity-90">
                     <tr>
                         <td>{{Form::label('Image: ')}}</td>
@@ -48,7 +48,7 @@
                         <td>{{Form::select('tag_id', \App\Models\Tag::pluck('title', 'id'))}}</td>
                     </tr>
                     <tr>
-                        <td>{{Form::submit('Modifier')}}</td>
+                        <td>{{Form::submit('Créer')}}</td>
                     </tr>
                 {!! Form::close() !!}
             </div>

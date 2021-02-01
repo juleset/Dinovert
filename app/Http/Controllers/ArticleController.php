@@ -37,7 +37,8 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        Article::create($request->except('_token'));
+        $article = Article::create($request->except(['_token','tag_id']));
+        $article ->tags()->attach($request->input('tag_id'));
         return redirect()->route('admin.tabarticles');
     }
 

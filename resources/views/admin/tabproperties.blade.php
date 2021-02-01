@@ -58,8 +58,12 @@
         </div>
     </div>
 
-    <a href="{{url('properties/create')}}" class="grid text-5xl text-white bg-oxley-500 text-center justify-items-center">
-        <button>Ajouter un bien</button>
-    </a>
+    <div class="grid gap-2">
+
+        <a href="{{route('properties.create')}}" class="grid justify-items-center">
+            <button class="uppercase px-8 py-2 rounded-full bg-oxley-500 text-blue-50 max-w-max shadow-sm hover:shadow-lg">Ajouter un bien</button>
+        </a>
+
+    </div>
 
 </x-app-layout>

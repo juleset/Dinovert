@@ -9,7 +9,7 @@ class Tag extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title'];
+    protected $fillable = ['title','slug'];
 
     public function articles(){
         return $this->belongsToMany(Article::class)->withTimestamps();

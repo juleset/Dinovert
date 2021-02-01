@@ -25,7 +25,7 @@ class PropertyFactory extends Factory
     {
         return [
             'price' => $this->faker->numberBetween(100000, 155000),
-            'location' => $this->faker->city,
+            'location' => $this->faker->unique()->city,
             'surface' => $this->faker->numberBetween(75, 135),
             'roomNumber' => $this->faker->numberBetween(3,6),
             'condition' => $this->faker->randomElement(['Neuf', 'Abandonné', 'Récemment rénové']),

@@ -33,7 +33,14 @@ class PropertyController extends Controller
             ->get();
 //        dd($properties);
         return view('admin.tabproperties',compact('properties'));
+    }
 
+    public function index3()
+    {
+        $properties = Property::with('type','images')
+            ->get();
+        //dd($properties);
+        return view('properties.index',compact('properties'));
     }
 
     /**
