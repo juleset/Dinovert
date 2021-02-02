@@ -1,49 +1,72 @@
-<div class="grid justify-items-center mt-5">
-    <div class=" grid grid-cols-2 bg-oxley-400 bg-opacity-75 rounded-lg ">
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Tous nos biens') }}
+        </h2>
+    </x-slot>
 
-            <div class="grid grid-cols-1 m-5 bg-white text-center rounded-lg">
-                <a href="#">
-                    <img src="{{$properties->img}}" class="rounded-lg">
-                </a>
+<div class="grid justify-items-center mt-5">
+    <div class=" grid grid-cols-1 bg-oxley-400 bg-opacity-75 rounded-lg ">
+
+            <div class="m-5 bg-white text-center rounded-lg">
+                <div class=" bg-gray-100">
+                    <div class="swiper-container ">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <img src="{{$properties->images[0]->img}}">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{{$properties->images[1]->img}}">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="{{$properties->images[2]->img}}">
+                            </div>
+                        </div>
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                    </div>
+                </div>
 
                 <h1>{{$properties->price.' €'}}</h1>
                 <h1>{{$properties->location}}</h1>
                 <h1>{{$properties->surface.' m²'}}</h1>
+                <h1>{{$properties->roomNumber}}</h1>
+                <h1>{{$properties->condition}}</h1>
+                <h1>{{$properties->constructionYear}}</h1>
+                <h1>{{$properties->description}}</h1>
             </div>
 
     </div>
 
-    <!-- <div class="carousel">
-         <div class="carousel-inner">
-             <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
-             <div class="carousel-item">
-                 <img src="http://fakeimg.pl/2000x800/0079D8/fff/?text=Without">
-             </div>
-             <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
-             <div class="carousel-item">
-                 <img src="http://fakeimg.pl/2000x800/DA5930/fff/?text=JavaScript">
-             </div>
-             <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
-             <div class="carousel-item">
-                 <img src="http://fakeimg.pl/2000x800/F90/fff/?text=Carousel">
-             </div>
-             <label for="carousel-3" class="carousel-control prev control-1">‹</label>
-             <label for="carousel-2" class="carousel-control next control-1">›</label>
-             <label for="carousel-1" class="carousel-control prev control-2">‹</label>
-             <label for="carousel-3" class="carousel-control next control-2">›</label>
-             <label for="carousel-2" class="carousel-control prev control-3">‹</label>
-             <label for="carousel-1" class="carousel-control next control-3">›</label>
-             <ol class="carousel-indicators">
-                 <li>
-                     <label for="carousel-1" class="carousel-bullet">•</label>
-                 </li>
-                 <li>
-                     <label for="carousel-2" class="carousel-bullet">•</label>
-                 </li>
-                 <li>
-                     <label for="carousel-3" class="carousel-bullet">•</label>
-                 </li>
-             </ol>
-         </div>
-     </div>-->
+
+
+
+
+
+    <script>
+        var mySwiper = new Swiper ('.swiper-container', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+
+
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        })
+    </script>
+
+
+
+
+
 </div>
+</x-app-layout>

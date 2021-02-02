@@ -31,7 +31,7 @@ class PropertyController extends Controller
     {
         $properties = Property::with('type','images')
             ->get();
-//        dd($properties);
+        //dd($properties);
         return view('admin.tabproperties',compact('properties'));
     }
 
@@ -46,10 +46,7 @@ class PropertyController extends Controller
     public function detail($id)
     {
         $properties = Property::with('images')->findOrFail($id);
-
-
-        //$properties->images()->attach('tag_id');
-        dd($properties);
+        //dd($properties);
         return view('properties.detail',compact('properties'));
     }
 
@@ -129,7 +126,9 @@ class PropertyController extends Controller
      */
     public function destroy($id, Request $request)
     {
-        if(Property::findOrFail($id)->delete()){
+        $property = Property::findOrFail($id);
+        $property->images()->where('property_id','=',$id)->delete();
+        if($property->delete()){
             return redirect()->route('admin.tabproperties');
         }else{
             return abort(404);
