@@ -32,13 +32,12 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         'create', 'store'
     ]);
 
-    Route::get('/contact', function (){return view('contact.contact');})->name('contact');
-    Route::get('/mentions', function (){return view('mentions.mentions');})->name('mentions');
+
     //Route::get('/properties/create', [PropertyController::class, 'create'])->name('properties.create');
     Route::get('/admin/tabproperties', [PropertyController::class, 'index2'])->name('admin.tabproperties');
     Route::get('/properties/edit/{id}', [PropertyController::class, 'edit'])->name('properties.edit');
     Route::delete('/properties/{id}', [PropertyController::class, 'destroy'])->name('properties.destroy');
-    Route::get('/properties/index', [PropertyController::class, 'index3'])->name('properties.index');
+
 
 
     Route::get('/admin/tabarticles', [ArticleController::class, 'index'])->name('admin.tabarticles');
@@ -52,7 +51,11 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 Route::get('/admin', function () {
     return view('admin.admin');
 });
-
+Route::get('/contact', function (){return view('contact.contact');})->name('contact');
+Route::get('/mentions', function (){return view('mentions.mentions');})->name('mentions');
+Route::get('/properties/index', [PropertyController::class, 'index3'])->name('properties.index');
+Route::get('/properties/index/detail/{id}', [PropertyController::class, 'detail'])->name('properties.detail');
+Route::get('/articles/index', [ArticleController::class, 'index2'])->name('article.index');
 Route::get('/', [PropertyController::class, 'index']);
 
 //Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

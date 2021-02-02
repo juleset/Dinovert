@@ -239,7 +239,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="px-5 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="#pablo">
+                    <a class="px-5 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75" href="{{route('article.index')}}">
                         Actualités
                     </a>
                 </li>

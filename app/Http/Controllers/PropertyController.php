@@ -43,6 +43,18 @@ class PropertyController extends Controller
         return view('properties.index',compact('properties'));
     }
 
+    public function detail($id)
+    {
+        $properties = Property::with('images')->findOrFail($id);
+
+
+        //$properties->images()->attach('tag_id');
+        dd($properties);
+        return view('properties.detail',compact('properties'));
+    }
+
+
+
     /**
      * Show the form for creating a new resource.
      *
