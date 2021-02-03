@@ -13,9 +13,9 @@
                     <img src="{{$property->images[0]->img}}" class="rounded-lg">
                     </a>
 
-                    <h1>{{$property->price.' €'}}</h1>
-                    <h1>{{$property->location}}</h1>
-                    <h1>{{$property->surface.' m²'}}</h1>
+                    <p>{{$property->price.' €'}}</p>
+                    <p>{{$property->location}}</p>
+                    <p>{{$property->surface.' m²'}}</p>
                 </div>
             @endforeach
         </div>

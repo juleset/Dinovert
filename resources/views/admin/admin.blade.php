@@ -6,12 +6,23 @@
     </x-slot>
 
     <div class="container">
-        <div class="grid-cols-3 flex md:space-x-10 lg:space-x-20 text-center justify-items-center">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                <a href="{{url('/admin/tabproperties')}}">Gérer les biens</a>
+        <div class="grid grid-cols-1  text-center justify-items-center">
+            <div class="">
+                <a href="{{url('/admin/tabproperties')}}">
+                    <button class="uppercase px-8 py-2 rounded-full bg-oxley-500 text-blue-50 max-w-max shadow-sm hover:shadow-lg">Gérer les biens</button>
+                </a>
             </div>
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                <a href="{{url('/admin/tabarticles')}}">Gérer les actualités</a>
+            <div class="">
+                <a href="{{url('/admin/tabarticles')}}">
+                    <button class="uppercase px-8 py-2 rounded-full bg-oxley-500 text-blue-50 max-w-max shadow-sm hover:shadow-lg">Gérer les actualités</button>
+                </a>
+
+            </div>
+            <div class="">
+                <a href="{{url('/admin/wysiwyg')}}">
+                    <button class="uppercase px-8 py-2 rounded-full bg-oxley-500 text-blue-50 max-w-max shadow-sm hover:shadow-lg">Acces au WYSIWYG</button>
+                </a>
+
             </div>
 
         </div>

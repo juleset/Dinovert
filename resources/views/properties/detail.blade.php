@@ -31,13 +31,13 @@
                     </div>
                 </div>
 
-                <h1>{{$properties->price.' €'}}</h1>
-                <h1>{{$properties->location}}</h1>
-                <h1>{{$properties->surface.' m²'}}</h1>
-                <h1>{{$properties->roomNumber}}</h1>
-                <h1>{{$properties->condition}}</h1>
-                <h1>{{$properties->constructionYear}}</h1>
-                <h1>{{$properties->description}}</h1>
+                <p>{{$properties->price.' €'}}</p>
+                <p>{{$properties->location}}</p>
+                <p>{{$properties->surface.' m²'}}</p>
+                <p>{{$properties->roomNumber}}</p>
+                <p>{{$properties->condition}}</p>
+                <p>{{$properties->constructionYear}}</p>
+                <p>{{$properties->description}}</p>
             </div>
 
     </div>

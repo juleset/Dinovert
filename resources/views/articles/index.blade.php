@@ -8,12 +8,14 @@
     <div class="grid justify-items-center mt-5">
         <div class=" grid grid-cols-2 bg-oxley-400 bg-opacity-75 rounded-lg ">
             @foreach($articles as $article)
-                <div class="grid grid-cols-1 m-5 bg-white text-center rounded-lg">
-                    <img src="{{$article->img}}" class="rounded-lg">
-                    <h1>{{$article->title}}</h1>
-                    <h1>{{$article->description}}</h1>
-                    <h1>{{$article->category->title}}</h1>
-                    <h1>{{$article->tags[0]->title}}</h1>
+                <div class="card ">
+                    <div class="m-5 bg-oxley-200 text-center rounded-lg">
+                    <img src="{{$article->img}}" class="rounded-lg justify-content-center">
+                    <h2>{{$article->title}}</h2>
+                    <p>{{$article->description}}</p>
+                    <p>{{$article->category->title}}</p>
+                    <button class="uppercase px-2 py-1 rounded-full bg-blue-300 text-blue-600 max-w-max shadow-sm hover:shadow-lg">{{'#'.$article->tags[0]->title}}</button><br>
+                    </div>
                 </div>
             @endforeach
         </div>

@@ -45,6 +45,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::delete('/articles/{id}', [ArticleController::class, 'destroy'])->name('articles.destroy');
     Route::get('/articles/edit/{id}', [ArticleController::class, 'edit'])->name('articles.edit');
 
+    //route WYSIWYG
+    Route::get('/admin/wysiwyg', function (){return view('wysiwyg');})->name('wysiwyg');
+
 });
 
 
