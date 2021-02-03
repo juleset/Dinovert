@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <div class="container bg-oxley-200 mt-5">
+    <div class="container bg-oxley-200 mt-5 m-auto">
         <div class="grid justify-items-center">
         <p>Merci de lire attentivement les présentes modalités d'utilisation du présent site avant de le parcourir. En vous connectant sur ce site, vous acceptez sans réserve les présentes modalités.
         </p><h3>Editeur du site</h3>

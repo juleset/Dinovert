@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Property;
 use App\Models\Type;
+use App\Events\PropertyCreated;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class PropertyController extends Controller
 {
@@ -72,6 +74,7 @@ class PropertyController extends Controller
      */
     public function store(Request $request)
     {
+        event(new PropertyCreated($request));
         Property::create($request->except('_token'));
         return redirect()->route('admin.tabproperties');
     }

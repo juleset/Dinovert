@@ -124,8 +124,10 @@
                     <div class=" text-center ">
                         <p class="text-grey-darker leading-normal">Inscrivez-vous à notre Newsletter ici ! </p>
                         <div class="mt-4 justify-items-center ">
-                            <input type="text" class="p-2 border border-grey-light round text-grey-dark text-sm h-auto" placeholder="Votre adresse mail ...">
-                            <button class="bg-oxley-600 text-white rounded-sm h-auto text-xs p-3">S'inscrire</button>
+                            {!! Form::open(['route' => 'newsletter']) !!}
+                            {{Form::text('email',null, ['class'=> 'p-2 border border-grey-light round text-grey-dark text-sm h-auto', 'placeholder' => 'Votre adresse mail ...'])}}
+                            <button class="bg-oxley-600 text-white rounded-sm h-auto text-xs p-3" name="inscription">S'inscrire</button>
+                            {!! Form::close() !!}
                         </div>
                     </div>
                 </div>

@@ -39,9 +39,9 @@
                         <td>{{Form::submit('Créer')}}</td>
                     </tr>
                 {!! Form::close() !!}
-            </div>
-            </table>
 
+            </table>
+        </div>
         </div>
     </div>
 

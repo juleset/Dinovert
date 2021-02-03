@@ -6,6 +6,7 @@ use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\MailController;
 //use Spatie\Menu\Menu;
 
 /*
@@ -33,15 +34,14 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     ]);
 
 
-    //Route::get('/properties/create', [PropertyController::class, 'create'])->name('properties.create');
+    //routes tables properties
     Route::get('/admin/tabproperties', [PropertyController::class, 'index2'])->name('admin.tabproperties');
     Route::get('/properties/edit/{id}', [PropertyController::class, 'edit'])->name('properties.edit');
     Route::delete('/properties/{id}', [PropertyController::class, 'destroy'])->name('properties.destroy');
 
 
-
+    //routes tables articles
     Route::get('/admin/tabarticles', [ArticleController::class, 'index'])->name('admin.tabarticles');
-
     Route::delete('/articles/{id}', [ArticleController::class, 'destroy'])->name('articles.destroy');
     Route::get('/articles/edit/{id}', [ArticleController::class, 'edit'])->name('articles.edit');
 
@@ -52,11 +52,21 @@ Route::get('/admin', function () {
     return view('admin.admin');
 });
 Route::get('/contact', function (){return view('contact.contact');})->name('contact');
+
 Route::get('/mentions', function (){return view('mentions.mentions');})->name('mentions');
+
+Route::get('/quisommesnous', function (){return view('qui-sommes-nous.qui-sommes-nous');})->name('quisommesnous');
+
 Route::get('/properties/index', [PropertyController::class, 'index3'])->name('properties.index');
 Route::get('/properties/index/detail/{id}', [PropertyController::class, 'detail'])->name('properties.detail');
+
 Route::get('/articles/index', [ArticleController::class, 'index2'])->name('article.index');
-Route::get('/', [PropertyController::class, 'index']);
+
+Route::get('/', [PropertyController::class, 'index'])->name('accueil');
+
+Route::post('/', [MailController::class, 'store'])->name('newsletter');
+
+
 
 //Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //    return view('dashboard');
