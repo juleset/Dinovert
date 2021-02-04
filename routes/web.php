@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\TagController;
-use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ImageController;
 use App\Http\Controllers\MailController;
 //use Spatie\Menu\Menu;
@@ -55,6 +55,7 @@ Route::get('/admin', function () {
     return view('admin.admin');
 });
 Route::get('/contact', function (){return view('contact.contact');})->name('contact');
+Route::post('/contact', [ContactController::class, 'store']);
 
 Route::get('/mentions', function (){return view('mentions.mentions');})->name('mentions');
 

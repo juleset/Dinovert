@@ -9,12 +9,12 @@ class MailController extends Controller
 {
     public function create()
     {
-        return view('/');
+        return view('newsletter');
     }
 
-    public function store($request)
+    public function store(Request $request)
     {
-        Newsletter::create($request->except('_token'));
+        Newsletter::create($request);
         return redirect()->route('accueil');
     }
 }

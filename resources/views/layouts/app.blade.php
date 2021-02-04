@@ -81,19 +81,6 @@
             <!-- FOOTER -->
             <div class=" p-8 bg-blue-bayoux-600 bg-opacity-90 mt-5">
                 <div class=" justify-items-center">
-                    {{--                <div class="sm:w-1/2 h-auto">--}}
-                    {{--                    <div class="text-orange mb-2">Orange</div>--}}
-                    {{--                    <ul class="list-reset leading-normal">--}}
-                    {{--                        <li class="hover:text-orange text-grey-darker">One</li>--}}
-                    {{--                        <li class="hover:text-orange text-grey-darker">Two</li>--}}
-                    {{--                        <li class="hover:text-orange text-grey-darker">Three</li>--}}
-                    {{--                        <li class="hover:text-orange text-grey-darker">Four</li>--}}
-                    {{--                        <li class="hover:text-orange text-grey-darker">Five</li>--}}
-                    {{--                        <li class="hover:text-orange text-grey-darker">Six</li>--}}
-                    {{--                        <li class="hover:text-orange text-grey-darker">Seven</li>--}}
-                    {{--                        <li class="hover:text-orange text-grey-darker">Eight</li>--}}
-                    {{--                    </ul>--}}
-                    {{--                </div>--}}
                     <div class="grid grid-cols-1 justify-items-center mb-2">
                         <div class="flex flex-wrap space-x-2">
                             <a class="link" href="#" data-tippy-content="@facebook_handle"><svg class="h-6 fill-current text-white hover:text-oxley-500" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -129,7 +116,7 @@
                     <div class=" text-center ">
                         <p class="text-grey-darker leading-normal">Inscrivez-vous à notre Newsletter ici ! </p>
                         <div class="mt-4 justify-items-center ">
-                            {!! Form::open(['route' => 'newsletter']) !!}
+                            {!! Form::open() !!}
                             {{Form::text('email',null, ['class'=> 'p-2 border border-grey-light round text-grey-dark text-sm h-auto', 'placeholder' => 'Votre adresse mail ...'])}}
                             <button class="bg-oxley-600 text-white rounded-sm h-auto text-xs p-3" name="inscription">S'inscrire</button>
                             {!! Form::close() !!}

@@ -512,29 +512,41 @@
                 </svg>
             </div>
         </div>
+        <form method="post" action="">
         <div class="">
             <div>
-                <span class="uppercase text-sm text-gray-600 font-bold">Nom Prénom</span>
+                <span class="uppercase text-sm text-gray-600 font-bold">Nom</span>
                 <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                       type="text" placeholder="Saisir votre nom et prénom">
+                       type="text" name="lastname" placeholder="Saisir votre nom">
             </div>
-            <div class="mt-8">
+            <div class="mt-6">
+                <span class="uppercase text-sm text-gray-600 font-bold">Prénom</span>
+                <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                       type="text" name="firstname" placeholder="Saisir votre prénom">
+            </div>
+            <div class="mt-6">
                 <span class="uppercase text-sm text-gray-600 font-bold">Email</span>
                 <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
-                       type="text" placeholder="Saisir votre adresse mail">
+                       type="text" name="email" placeholder="Saisir votre adresse mail">
             </div>
-            <div class="mt-8">
+            <div class="mt-6">
+                <span class="uppercase text-sm text-gray-600 font-bold">Sujet</span>
+                <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
+                       type="text" name="subject" placeholder="Saisir le sujet de votre message">
+            </div>
+            <div class="mt-6">
                 <span class="uppercase text-sm text-gray-600 font-bold">Message</span>
-                <textarea
+                <textarea name="content"
                     class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" placeholder="Saisir votre message"></textarea>
             </div>
-            <div class="mt-8">
-                <button
+            <div class="mt-6">
+                <button type="submit"
                     class="uppercase text-sm font-bold tracking-wide bg-oxley-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
                     Envoyer le message
                 </button>
             </div>
         </div>
+        </form>
     </div>
     </div>
 </x-app-layout>
