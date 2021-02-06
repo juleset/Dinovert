@@ -512,8 +512,10 @@
                 </svg>
             </div>
         </div>
-        <form method="post" action="">
+        <form method="post" action="contact-us">
         <div class="">
+            @csrf
+            <input type="hidden" name="_token" value="{{ csrf_token() }}" />
             <div>
                 <span class="uppercase text-sm text-gray-600 font-bold">Nom</span>
                 <input class="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline"
@@ -536,7 +538,7 @@
             </div>
             <div class="mt-6">
                 <span class="uppercase text-sm text-gray-600 font-bold">Message</span>
-                <textarea name="content"
+                <textarea name="message"
                     class="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" placeholder="Saisir votre message"></textarea>
             </div>
             <div class="mt-6">

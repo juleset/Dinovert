@@ -55,7 +55,7 @@ Route::get('/admin', function () {
     return view('admin.admin');
 });
 Route::get('/contact', function (){return view('contact.contact');})->name('contact');
-Route::post('/contact', [ContactController::class, 'store']);
+Route::post('contact-us', [ContactController::class, 'saveContact']);
 
 Route::get('/mentions', function (){return view('mentions.mentions');})->name('mentions');
 
@@ -68,7 +68,6 @@ Route::get('/articles/index', [ArticleController::class, 'index2'])->name('artic
 
 Route::get('/', [PropertyController::class, 'index'])->name('accueil');
 
-Route::post('/', [MailController::class, 'store'])->name('newsletter');
 
 
 
