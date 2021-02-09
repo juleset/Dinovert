@@ -18,7 +18,10 @@ class PropertyController extends Controller
      */
     public function index()
     {
-        $properties = Property::with('type','images')
+        $properties = Property::with(['images' => function($query){
+            $query->select('img');
+        }])
+            ->select('price', 'location', 'surface', 'img')
             ->join('images','property_id', '=', 'properties.id')
             ->latest('properties.created_at')
             ->limit(3)
@@ -39,7 +42,7 @@ class PropertyController extends Controller
 
     public function index3()
     {
-        $properties = Property::with('type','images')
+        $properties = Property::with('images')
             ->get();
         //dd($properties);
         return view('properties.index',compact('properties'));
